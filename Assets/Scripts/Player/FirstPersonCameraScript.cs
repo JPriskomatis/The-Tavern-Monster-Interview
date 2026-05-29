@@ -159,7 +159,7 @@ namespace FirstPersonCamera
             HandleMouseLook();
             HandleZoom();
             HandleCameraShake();
-            HandleCursorToggle();
+            
         }
         private void HandleMouseLook()
         {
@@ -382,21 +382,17 @@ namespace FirstPersonCamera
             cameraShakeOffset = bobOffset + landingOffset;
         }
 
-        private void HandleCursorToggle()
+        public void HandleCursorToggle()
         {
-            // Toggle cursor lock with Escape key
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Cursor.lockState == CursorLockMode.Locked)
             {
-                if (Cursor.lockState == CursorLockMode.Locked)
-                {
-                    Cursor.lockState = CursorLockMode.None;
-                    Cursor.visible = true;
-                }
-                else
-                {
-                    Cursor.lockState = CursorLockMode.Locked;
-                    Cursor.visible = false;
-                }
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
         }
 

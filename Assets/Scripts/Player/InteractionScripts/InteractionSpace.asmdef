@@ -2,7 +2,8 @@
     "name": "InteractionSpace",
     "rootNamespace": "",
     "references": [
-        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:e3a280141e4bb2d4d88bba86f4ca193c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

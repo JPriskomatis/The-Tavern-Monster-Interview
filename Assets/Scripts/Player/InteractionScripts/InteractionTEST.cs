@@ -17,6 +17,8 @@ namespace EJETAGame
         [SerializeField]
         private Object m_SceneAsset;
 
+        public GameEvent StopPlayerMovement;
+
         private bool isLoaded = false;
 
         //Which button the user must press to initiate the Interaction;
@@ -27,6 +29,7 @@ namespace EJETAGame
             {
                 isLoaded = true;
                 SceneManager.LoadScene(m_SceneAsset.name, LoadSceneMode.Additive);
+                StopPlayerMovement?.Raise();
             }
             
         }
