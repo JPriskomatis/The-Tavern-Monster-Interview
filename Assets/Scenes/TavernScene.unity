@@ -5900,6 +5900,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1158535297}
+  - component: {fileID: 1158535298}
   m_Layer: 0
   m_Name: ---------------UI CANVAS---------------
   m_TagString: Untagged
@@ -5924,6 +5925,35 @@ Transform:
   - {fileID: 2020021596}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1158535298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158535296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a954b5167c502e246936c62a327277a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SOArchitecture::GameEventListener
+  EventResponses:
+  - Event: {fileID: 11400000, guid: 08319e4824cdf9545b1c373aef323ba8, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1831525570}
+          m_TargetAssemblyTypeName: NewspaperDaily, Assembly-CSharp
+          m_MethodName: NewEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1160446315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7123,6 +7153,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4958141964136856, guid: 7738ccb3c7ccb2f4aa36bd30a8fbb7ef, type: 3}
   m_PrefabInstance: {fileID: 1367307117}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1379067797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 907463085272535146, guid: 8b3a34d00ae838e45b6796426e77dbac, type: 3}
+  m_PrefabInstance: {fileID: 265419514}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1381367778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8777,6 +8818,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4958141964136856, guid: 7738ccb3c7ccb2f4aa36bd30a8fbb7ef, type: 3}
   m_PrefabInstance: {fileID: 1510859183}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1521159929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521159930}
+  m_Layer: 0
+  m_Name: ---------------Event Handler---------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1521159930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521159929}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.47691, y: -8.84874, z: 37.77822}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1831525569}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1535800771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9843,6 +9916,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4721780193091316, guid: efdb3ed10ba9c6b418a492aa30ba0edd, type: 3}
   m_PrefabInstance: {fileID: 1710771947}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1714351358 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 767045257477489144, guid: 8b3a34d00ae838e45b6796426e77dbac, type: 3}
+  m_PrefabInstance: {fileID: 265419514}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1718021563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10615,6 +10699,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4958141964136856, guid: 7738ccb3c7ccb2f4aa36bd30a8fbb7ef, type: 3}
   m_PrefabInstance: {fileID: 1818493078}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1831525568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1831525569}
+  - component: {fileID: 1831525570}
+  m_Layer: 0
+  m_Name: NewspaperEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1831525569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831525568}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1521159930}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1831525570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831525568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97590fbe25e94df40a2a407bf2e79b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewspaperDaily
+  NewspaperData: {fileID: 11400000, guid: e18925e1e8517884899a1010e6519d79, type: 2}
+  eventTitle: {fileID: 1379067797}
+  eventDescription: {fileID: 1714351358}
+  newspaperDatas:
+  - {fileID: 11400000, guid: eab37bf95e9090b4c9a1c70ea54848b4, type: 2}
+  - {fileID: 11400000, guid: e18925e1e8517884899a1010e6519d79, type: 2}
+  - {fileID: 11400000, guid: da57614cd085ae045aedd1677368624d, type: 2}
+  - {fileID: 11400000, guid: 1b7c1a614cc296d4d8291816721b9421, type: 2}
+  NewEventNewspaper: {fileID: 11400000, guid: 08319e4824cdf9545b1c373aef323ba8, type: 2}
 --- !u!1001 &1846145877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12716,3 +12853,4 @@ SceneRoots:
   - {fileID: 56062027}
   - {fileID: 687957085}
   - {fileID: 1158535297}
+  - {fileID: 1521159930}
