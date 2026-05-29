@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f2cc2f5acfe7334d99ddf179f0e5eca, type: 3}
-  m_Name: Gal
-  m_EditorClassIdentifier: Assembly-CSharp::MonsterSO
-  monsterName: Gal
-  monsterType: {fileID: 11400000, guid: 844aa6d8840a0464595ea03dbeafbadd, type: 2}
+  m_Script: {fileID: 11500000, guid: 2870f88b34ad89f4982202613dc37bf4, type: 3}
+  m_Name: Orc
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterType
+  type: 

@@ -6,7 +6,6 @@ public class BaseMonster : MonoBehaviour, IInteractable
 {
     public MonsterSO monsterSO;
 
-    public CurrentMonsterSO currentMonsterSO;
 
     [SerializeField]
     private Object m_SceneAsset;
@@ -19,13 +18,16 @@ public class BaseMonster : MonoBehaviour, IInteractable
 
     //Which button the user must press to initiate the Interaction;
     public KeyCode interactionKey;
+
+    public MonsterContext monsterContext;
     public void Interact()
     {
         if (Input.GetKeyDown(interactionKey) && canInteractWith)
         {
-            currentMonsterSO.monsterName = monsterSO.monsterName;
             isLoaded = true;
             canInteractWith = false;
+
+            monsterContext.monster = monsterSO;
 
             SceneManager.LoadScene(m_SceneAsset.name, LoadSceneMode.Additive);
             StopPlayerMovement.Raise();
@@ -47,4 +49,5 @@ public class BaseMonster : MonoBehaviour, IInteractable
         canInteractWith = true;
         Debug.Log("Interaction Ended");
     }
+
 }

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Bruh
   m_EditorClassIdentifier: Assembly-CSharp::MonsterSO
   monsterName: bruh
+  monsterType: {fileID: 11400000, guid: 844aa6d8840a0464595ea03dbeafbadd, type: 2}
