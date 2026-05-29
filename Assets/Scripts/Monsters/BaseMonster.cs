@@ -13,16 +13,19 @@ public class BaseMonster : MonoBehaviour, IInteractable
 
     public GameEvent StopPlayerMovement;
 
+    private bool canInteractWith = true;
+
     private bool isLoaded = false;
 
     //Which button the user must press to initiate the Interaction;
     public KeyCode interactionKey;
     public void Interact()
     {
-        if (Input.GetKeyDown(interactionKey))
+        if (Input.GetKeyDown(interactionKey) && canInteractWith)
         {
             currentMonsterSO.monsterName = monsterSO.monsterName;
             isLoaded = true;
+            canInteractWith = false;
 
             SceneManager.LoadScene(m_SceneAsset.name, LoadSceneMode.Additive);
             StopPlayerMovement.Raise();
@@ -41,6 +44,7 @@ public class BaseMonster : MonoBehaviour, IInteractable
     //We can debug a statement to let us know when the interaction ends;
     public void OnInteractExit()
     {
+        canInteractWith = true;
         Debug.Log("Interaction Ended");
     }
 }
