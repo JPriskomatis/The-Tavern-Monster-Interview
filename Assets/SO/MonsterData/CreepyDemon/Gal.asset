@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonsterSO
   monsterName: Gal
   monsterType: {fileID: 11400000, guid: 844aa6d8840a0464595ea03dbeafbadd, type: 2}
+  monsterTraits:
+  - {fileID: 11400000, guid: 4146cab2631a7784dbb560518d6f7272, type: 2}
+  - {fileID: 11400000, guid: 7cda4c6a0fb7f3a488b7dd84ef88b957, type: 2}

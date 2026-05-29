@@ -5,4 +5,5 @@ public class MonsterSO : ScriptableObject
 {
     public string monsterName;
     public MonsterType monsterType;
+    public MonsterTraitSO[] monsterTraits;
 }
