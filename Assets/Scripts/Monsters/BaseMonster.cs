@@ -1,3 +1,4 @@
+using System.Collections;
 using EJETAGame;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,6 +21,8 @@ public class BaseMonster : MonoBehaviour, IInteractable
     public KeyCode interactionKey;
 
     public MonsterContext monsterContext;
+
+    
     public void Interact()
     {
         if (Input.GetKeyDown(interactionKey) && canInteractWith)
@@ -49,5 +52,8 @@ public class BaseMonster : MonoBehaviour, IInteractable
         canInteractWith = true;
         Debug.Log("Interaction Ended");
     }
+
+
+
 
 }

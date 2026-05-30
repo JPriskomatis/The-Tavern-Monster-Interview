@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class NewDayManager : MonoBehaviour
@@ -24,10 +25,7 @@ public class NewDayManager : MonoBehaviour
 
     public GameEventDefinitionSO CurrentEvent { get; private set; }
 
-    private void Start()
-    {
-        GenerateDay();
-    }
+    [SerializeField] private Transform destinationTransform;
 
     public void AdvanceDay()
     {
@@ -49,6 +47,8 @@ public class NewDayManager : MonoBehaviour
 
         currentMonsterObject = monsterSelector.SpawnMonster(CurrentMonster);
 
+        StartCoroutine(MoveTowards(currentMonsterObject, destinationTransform, 3f));
+
         //The next couple of parts generate the things we need for the new day, a new newspaper and a new monster;
         GameEventDefinitionSO forcedEvent = CurrentMonster.eventReference;
 
@@ -67,6 +67,34 @@ public class NewDayManager : MonoBehaviour
         Debug.Log($"DAY {currentDay}");
         Debug.Log($"Monster: {CurrentMonster.monsterName}");
         Debug.Log($"Headline: {CurrentEvent.title}");
+    }
+
+    public IEnumerator MoveTowards(GameObject monster, Transform target, float speed)
+    {
+        while (Vector3.Distance(monster.transform.position, target.position) > 0.01f)
+        {
+            Vector3 direction = (target.position - monster.transform.position).normalized;
+
+            if (direction != Vector3.zero)
+            {
+                Quaternion lookRotation = Quaternion.LookRotation(direction);
+                monster.transform.rotation = Quaternion.Slerp(
+                    monster.transform.rotation,
+                    lookRotation,
+                    10f * Time.deltaTime
+                );
+            }
+
+            monster.transform.position = Vector3.MoveTowards(
+                monster.transform.position,
+                target.position,
+                speed * Time.deltaTime
+            );
+
+            yield return null;
+        }
+
+        monster.transform.position = target.position;
     }
 
     private GameEventDefinitionSO Convert(GameEventDefinitionSO eventData)
