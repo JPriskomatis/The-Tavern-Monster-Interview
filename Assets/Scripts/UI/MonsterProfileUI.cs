@@ -22,10 +22,10 @@ public class MonsterProfileUI : MonoBehaviour
     void Start()
     {
 
-        SetTraits(currentMonster.monster);
+        SetMonsterProfile(currentMonster.monster);
     }
 
-    public void SetTraits(MonsterSO monster)
+    public void SetMonsterProfile(MonsterSO monster)
     {
         ClearTraits();
 

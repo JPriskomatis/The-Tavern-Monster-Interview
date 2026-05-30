@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Gal
   m_EditorClassIdentifier: Assembly-CSharp::MonsterSO
   monsterName: Gal
+  monsterObject: {fileID: 1464468556707697911, guid: 3554064ca97dcff42ab6df0186e59eb4, type: 3}
   monsterType: {fileID: 11400000, guid: 844aa6d8840a0464595ea03dbeafbadd, type: 2}
   monsterTraits:
   - {fileID: 11400000, guid: 4146cab2631a7784dbb560518d6f7272, type: 2}
   - {fileID: 11400000, guid: 7cda4c6a0fb7f3a488b7dd84ef88b957, type: 2}
+  minDay: 0
+  maxDay: 999
+  spawnWeight: 1
