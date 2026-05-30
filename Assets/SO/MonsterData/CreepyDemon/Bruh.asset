@@ -20,5 +20,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7147c8be0b465c54fb3ece342a9f2c08, type: 2}
   minDay: 1
   maxDay: 999
-  spawnWeight: 1
-  eventId: goblin_market_riot
+  spawnWeight: 0.1
+  eventReference: {fileID: 11400000, guid: c922427761596ee4a848bcbf07ac526b, type: 2}

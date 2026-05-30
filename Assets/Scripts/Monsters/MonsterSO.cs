@@ -21,5 +21,5 @@ public class MonsterSO : ScriptableObject
     public float spawnWeight = 1f;
 
     [Header("Story Hook")]
-    public string eventId;
+    public GameEventDefinitionSO eventReference;
 }

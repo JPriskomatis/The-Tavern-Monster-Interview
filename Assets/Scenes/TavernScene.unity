@@ -10519,7 +10519,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewDayManager
   NewDay: {fileID: 11400000, guid: 3caacfdf055f88e4b994d10e715c5f8a, type: 2}
   currentDay: 0
-  newspaperDatabase: {fileID: 1831525572}
   monsterSelector: {fileID: 206728365}
 --- !u!1001 &1795534766
 PrefabInstance:
@@ -10857,7 +10856,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1831525569}
   - component: {fileID: 1831525570}
-  - component: {fileID: 1831525572}
   m_Layer: 0
   m_Name: NewspaperEvents
   m_TagString: Untagged
@@ -10896,23 +10894,6 @@ MonoBehaviour:
   eventTitle: {fileID: 1379067797}
   eventDescription: {fileID: 1714351358}
   currentDayNum: {fileID: 1367173500}
---- !u!114 &1831525572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831525568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3292352858d424ea3d83e978784f6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewspaperDatabase
-  events:
-  - {fileID: 11400000, guid: c922427761596ee4a848bcbf07ac526b, type: 2}
-  - {fileID: 11400000, guid: 336bc811e83ab7b479b57baab16a4264, type: 2}
-  - {fileID: 11400000, guid: 02d9f78588acad349b3dbef278e7b179, type: 2}
-  - {fileID: 11400000, guid: 26d381cab8b997d4d9b477ff8575006e, type: 2}
 --- !u!1001 &1846145877
 PrefabInstance:
   m_ObjectHideFlags: 0

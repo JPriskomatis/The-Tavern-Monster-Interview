@@ -16,9 +16,6 @@ public class NewDayManager : MonoBehaviour
     [Header("Days Settings")]
     public int currentDay = 1;
 
-    [Header("Systems")]
-    [SerializeField] private NewspaperDatabase newspaperDatabase;
-    
     [SerializeField] private MonsterSelector monsterSelector;
 
     public MonsterSO CurrentMonster { get; private set; }
@@ -42,7 +39,10 @@ public class NewDayManager : MonoBehaviour
     private void GenerateDay()
     {
         //We destroy the previous day's monster;
-        //Destroy(currentMonsterObject);
+        if(currentMonsterObject != null)
+        {
+            Destroy(currentMonsterObject);
+        }
 
         CurrentMonster =
             monsterSelector.GetMonster(currentDay);
@@ -50,7 +50,7 @@ public class NewDayManager : MonoBehaviour
         currentMonsterObject = monsterSelector.SpawnMonster(CurrentMonster);
 
         //The next couple of parts generate the things we need for the new day, a new newspaper and a new monster;
-        GameEventDefinitionSO forcedEvent = newspaperDatabase.GetById(CurrentMonster.eventId);
+        GameEventDefinitionSO forcedEvent = CurrentMonster.eventReference;
 
         if (forcedEvent != null)
         {

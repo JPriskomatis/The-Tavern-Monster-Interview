@@ -21,4 +21,4 @@ MonoBehaviour:
   minDay: 5
   maxDay: 999
   spawnWeight: 1
-  eventId: demon_sighting_rise
+  eventReference: {fileID: 11400000, guid: 336bc811e83ab7b479b57baab16a4264, type: 2}
