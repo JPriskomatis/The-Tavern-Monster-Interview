@@ -19,4 +19,7 @@ public class MonsterSO : ScriptableObject
 
     [Range(0f, 1f)]
     public float spawnWeight = 1f;
+
+    [Header("Story Hook")]
+    public string eventId;
 }

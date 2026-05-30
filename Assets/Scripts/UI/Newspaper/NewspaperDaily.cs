@@ -5,13 +5,24 @@ public class NewspaperDaily : MonoBehaviour
 {
     [SerializeField] private NewDayManager dayManager;
 
-    [SerializeField] private TextMeshProUGUI eventTitle, eventDescription;
+    [SerializeField] private TextMeshProUGUI eventTitle;
+    [SerializeField] private TextMeshProUGUI eventDescription;
 
-    private void Start() => RefreshNewsPaper();
+    [SerializeField] private TextMeshProUGUI currentDayNum;
+
+    private void Start()
+    {
+        RefreshNewsPaper();
+    }
 
     public void RefreshNewsPaper()
     {
-        eventTitle.text = dayManager.CurrentNewspaper.eventTitle;
-        eventDescription.text = dayManager.CurrentNewspaper.eventDescription;
+        var currentEvent = dayManager.CurrentEvent;
+
+        if (currentEvent == null) return;
+
+        eventTitle.text = currentEvent.title;
+        eventDescription.text = currentEvent.description;
+        currentDayNum.text = "Day "+dayManager.currentDay.ToString();
     }
 }

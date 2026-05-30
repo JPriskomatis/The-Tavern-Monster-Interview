@@ -17,6 +17,7 @@ public class MonsterSelector : MonoBehaviour
 
     public MonsterSO GetMonster(int day)
     {
+        Debug.Log("Monsters array size: " + monsters.Length);
         List<MonsterSO> validMonsters = new List<MonsterSO>();
 
         //We add all the valid monsters into our list;

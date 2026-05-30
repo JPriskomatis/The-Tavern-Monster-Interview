@@ -18,6 +18,7 @@ MonoBehaviour:
   monsterTraits:
   - {fileID: 11400000, guid: 4146cab2631a7784dbb560518d6f7272, type: 2}
   - {fileID: 11400000, guid: 7cda4c6a0fb7f3a488b7dd84ef88b957, type: 2}
-  minDay: 0
+  minDay: 5
   maxDay: 999
   spawnWeight: 1
+  eventId: demon_sighting_rise

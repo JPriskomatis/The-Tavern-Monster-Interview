@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96151110f31669a4c9d1b3ed0a1cbfc0, type: 3}
+  m_Name: silent_cathedral
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventDefinitionSO
+  eventId: silent_cathedral
+  title: Unusual Silence at the Cathedral
+  description: "Priests report that sacred chants failed to echo inside the cathedral
+    last night. Some claim a \u201Cpresence\u201D was felt watching from the shadows,
+    though no intruder was found."
