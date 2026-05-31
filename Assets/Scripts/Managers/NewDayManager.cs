@@ -23,7 +23,7 @@ public class NewDayManager : MonoBehaviour
 
     private GameObject currentMonsterObject;
 
-    public GameEventDefinitionSO CurrentEvent { get; private set; }
+    public WorldEventSO CurrentEvent { get; private set; }
 
     [SerializeField] private Transform destinationTransform;
 
@@ -50,7 +50,7 @@ public class NewDayManager : MonoBehaviour
         StartCoroutine(MoveTowards(currentMonsterObject, destinationTransform, 3f));
 
         //The next couple of parts generate the things we need for the new day, a new newspaper and a new monster;
-        GameEventDefinitionSO forcedEvent = CurrentMonster.eventReference;
+        WorldEventSO forcedEvent = CurrentMonster.eventReference;
 
         if (forcedEvent != null)
         {
@@ -97,9 +97,9 @@ public class NewDayManager : MonoBehaviour
         monster.transform.position = target.position;
     }
 
-    private GameEventDefinitionSO Convert(GameEventDefinitionSO eventData)
+    private WorldEventSO Convert(WorldEventSO eventData)
     {
-        GameEventDefinitionSO data = new GameEventDefinitionSO();
+        WorldEventSO data = new WorldEventSO();
 
         data.title = eventData.title;
         data.description= eventData.description;

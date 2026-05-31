@@ -32,8 +32,10 @@ public class MonsterProfileUI : MonoBehaviour
         monsterName.text = currentMonster.monster.monsterName;
         monsterType.text = currentMonster.monster.monsterType.name;
 
-        foreach (var trait in monster.monsterTraits)
+        foreach (var traitData in monster.monsterTraits)
         {
+            MonsterTraitSO trait = traitData.Trait;
+
             Debug.Log("Spawning trait: " + trait.name);
             GameObject textPrefab = Instantiate(traitPrefab, traitContainer);
             TextMeshProUGUI text = textPrefab.GetComponentInChildren<TextMeshProUGUI>();

@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GameEvent", menuName = "Game/Event")]
-public class GameEventDefinitionSO : ScriptableObject
+[CreateAssetMenu(fileName = "WorldEvent", menuName = "World/Event")]
+public class WorldEventSO : ScriptableObject
 {
     public string eventId;
 

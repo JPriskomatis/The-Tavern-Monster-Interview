@@ -11,7 +11,7 @@ public class MonsterSO : ScriptableObject
     public MonsterType monsterType;
 
     [Header("Traits")]
-    public MonsterTraitSO[] monsterTraits;
+    public MonsterTraitValue[] monsterTraits;
 
     [Header("Progression")]
     public int minDay = 1;
@@ -21,5 +21,5 @@ public class MonsterSO : ScriptableObject
     public float spawnWeight = 1f;
 
     [Header("Story Hook")]
-    public GameEventDefinitionSO eventReference;
+    public WorldEventSO eventReference;
 }

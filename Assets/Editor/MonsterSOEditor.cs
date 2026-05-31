@@ -23,19 +23,31 @@ public class MonsterSOEditor : Editor
 
         foreach (var trait in allTraits)
         {
-            bool hasTrait = monster.monsterTraits != null && System.Array.Exists(monster.monsterTraits, t => t == trait);
+            bool hasTrait = monster.monsterTraits != null &&
+                            System.Array.Exists(monster.monsterTraits, t => t.Trait == trait);
 
             bool newValue = EditorGUILayout.ToggleLeft(trait.name, hasTrait);
 
             if (newValue != hasTrait)
             {
                 Undo.RecordObject(monster, "Modify Traits");
-                var list = new System.Collections.Generic.List<MonsterTraitSO>(monster.monsterTraits ?? new MonsterTraitSO[0]);
+
+                var list = new System.Collections.Generic.List<MonsterTraitValue>(
+                    monster.monsterTraits ?? new MonsterTraitValue[0]
+                );
 
                 if (newValue)
-                    list.Add(trait);
+                {
+                    list.Add(new MonsterTraitValue
+                    {
+                        Trait = trait,
+                        Value = 0 // default value
+                    });
+                }
                 else
-                    list.Remove(trait);
+                {
+                    list.RemoveAll(t => t.Trait == trait);
+                }
 
                 monster.monsterTraits = list.ToArray();
 
