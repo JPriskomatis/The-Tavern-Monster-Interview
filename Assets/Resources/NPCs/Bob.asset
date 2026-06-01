@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: Bob
   m_EditorClassIdentifier: Assembly-CSharp::NpcSO
   npcName: Bob
-  npcObject: {fileID: 0}
+  npcObject: {fileID: 1083611620945343734, guid: 7e8204e8cf708484c836f2000d0e72c2, type: 3}
+  minDay: 0
+  spawnWeight: 1
   relations:
-  - {fileID: 0}
+    friendly:
+    - {fileID: 11400000, guid: 844aa6d8840a0464595ea03dbeafbadd, type: 2}
+    hostile:
+    - {fileID: 11400000, guid: aff623bf080843a498fd178b82d1c408, type: 2}
