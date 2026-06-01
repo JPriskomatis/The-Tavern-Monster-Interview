@@ -24,3 +24,4 @@ MonoBehaviour:
   maxDay: 999
   spawnWeight: 0.1
   eventReference: {fileID: 11400000, guid: c922427761596ee4a848bcbf07ac526b, type: 2}
+  inkJSON: {fileID: 4900000, guid: 51b674ae0ba397d43bd7ddbf19a904cd, type: 3}

@@ -22,4 +22,7 @@ public class MonsterSO : ScriptableObject
 
     [Header("Story Hook")]
     public WorldEventSO eventReference;
+
+    [Header("Dialogue")]
+    public TextAsset inkJSON;
 }
