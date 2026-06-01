@@ -11,7 +11,6 @@ public class TodaysCustomers : MonoBehaviour
     [SerializeField] int customerCount;
 
     private List<NpcSO> tonightCustomers = new List<NpcSO>();
-    private List<GameObject> spawnedCustomers = new List<GameObject>();
 
     [SerializeField] private Reservation[] reservations;
 
@@ -22,7 +21,6 @@ public class TodaysCustomers : MonoBehaviour
 
     public void GenerateCustomers(int currentDay)
     {
-        ClearCustomers();
         tonightCustomers.Clear();
 
         List<NpcSO> validNPCs = new List<NpcSO>();
@@ -102,32 +100,11 @@ public class TodaysCustomers : MonoBehaviour
             if (i >= reservations.Length)
                 break;
 
-            GameObject npcObject = Instantiate(
-                tonightCustomers[i].npcObject,
-                spawnPoints[i].position,
-                spawnPoints[i].rotation
-            );
-
-            spawnedCustomers.Add(npcObject);
-
             Debug.Log("Spawning: " + tonightCustomers[i].npcName);
 
             // Reactivate and apply text to the specific card being used
             reservations[i].gameObject.SetActive(true);
             reservations[i].ApplyReservation(tonightCustomers[i].npcName);
         }
-    }
-
-    private void ClearCustomers()
-    {
-        foreach (var npc in spawnedCustomers)
-        {
-            if (npc != null)
-            {
-                Destroy(npc);
-            }
-        }
-
-        spawnedCustomers.Clear();
     }
 }
