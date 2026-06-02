@@ -22,6 +22,7 @@ public class BaseMonster : MonoBehaviour, IInteractable
 
     public MonsterContext monsterContext;
 
+
     
     public void Interact()
     {
@@ -37,6 +38,7 @@ public class BaseMonster : MonoBehaviour, IInteractable
             SceneManager.LoadScene(m_SceneAsset.name, LoadSceneMode.Additive);
 
             StopPlayerMovement.Raise();
+
         }
 
     }
@@ -45,7 +47,7 @@ public class BaseMonster : MonoBehaviour, IInteractable
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
 
-        SceneManager.SetActiveScene(scene);
+        //SceneManager.SetActiveScene(scene);
         DialogueManager.GetInstance().EnterDialogueMode(monsterSO.inkJSON);
     }
 

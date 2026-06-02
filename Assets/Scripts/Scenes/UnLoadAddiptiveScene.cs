@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class LoadAddiptiveScene : MonoBehaviour
+public class UnLoadAddiptiveScene : MonoBehaviour
 {
     [SerializeField]
     private Object m_SceneAsset;

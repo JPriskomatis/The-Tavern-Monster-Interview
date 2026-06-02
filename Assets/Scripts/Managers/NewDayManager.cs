@@ -78,6 +78,7 @@ public class NewDayManager : MonoBehaviour
             if (direction != Vector3.zero)
             {
                 Quaternion lookRotation = Quaternion.LookRotation(direction);
+
                 monster.transform.rotation = Quaternion.Slerp(
                     monster.transform.rotation,
                     lookRotation,
@@ -95,6 +96,27 @@ public class NewDayManager : MonoBehaviour
         }
 
         monster.transform.position = target.position;
+
+        // Rotate an extra 90 degrees
+        Quaternion startRotation = monster.transform.rotation;
+        Quaternion endRotation = startRotation * Quaternion.Euler(0, 90, 0);
+
+        float duration = 0.3f;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            monster.transform.rotation = Quaternion.Slerp(
+                startRotation,
+                endRotation,
+                elapsed / duration
+            );
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        monster.transform.rotation = endRotation;
     }
 
     private WorldEventSO Convert(WorldEventSO eventData)

@@ -6,8 +6,7 @@ public class TodaysCustomers : MonoBehaviour
     [Header("NPC Pool")]
     [SerializeField] private NpcSO[] allNPCs;
 
-    [Header("Spawn Settings")]
-    [SerializeField] private Transform[] spawnPoints;
+    [Header("NPC Count Settings")]
     [SerializeField] int customerCount;
 
     private List<NpcSO> tonightCustomers = new List<NpcSO>();
@@ -82,7 +81,6 @@ public class TodaysCustomers : MonoBehaviour
 
     private void SpawnCustomers()
     {
-        // --- FIX 2: Deactivate all reservation objects first before mapping new ones ---
         foreach (var res in reservations)
         {
             if (res != null)
@@ -93,16 +91,14 @@ public class TodaysCustomers : MonoBehaviour
 
         for (int i = 0; i < tonightCustomers.Count; i++)
         {
-            if (i >= spawnPoints.Length)
-                break;
 
-            // Stop if we have more customers than actual reservation card components assigned
+            // Stop if we have more customers than actual reservation card components assigned;
             if (i >= reservations.Length)
                 break;
 
             Debug.Log("Spawning: " + tonightCustomers[i].npcName);
 
-            // Reactivate and apply text to the specific card being used
+            // Reactivate and apply text to the specific card being used;
             reservations[i].gameObject.SetActive(true);
             reservations[i].ApplyReservation(tonightCustomers[i].npcName);
         }
