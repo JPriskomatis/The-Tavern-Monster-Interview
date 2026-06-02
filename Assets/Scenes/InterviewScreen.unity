@@ -497,8 +497,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -13.2121}
-  m_SizeDelta: {x: 0, y: 118.4004}
+  m_AnchoredPosition: {x: 2.9302, y: -18.1561}
+  m_SizeDelta: {x: -24.1396, y: 108.5123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &183564063
 MonoBehaviour:
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
   m_Padding:
-    m_Left: 25
+    m_Left: 0
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
@@ -562,8 +562,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: -50, y: -240}
+  m_AnchoredPosition: {x: 1.8392029, y: 32.64319}
+  m_SizeDelta: {x: -24.2513, y: -225.2864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &213999331
 MonoBehaviour:
@@ -4007,7 +4007,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Why does he want to join the tavern?
+  m_text: Can he be trusted?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5974,7 +5974,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Why does he want to join the tavern?
+  m_text: How will he behave around humans?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6503,6 +6503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InterviewManager
   currentMonster: {fileID: 11400000, guid: d2df749bb6e08d949810d63fd398d4c3, type: 2}
+  tavernMonsters: {fileID: 11400000, guid: 6f1b95b7e9b59a14a9f6b79dc5540e23, type: 2}
+  FinishedWithMonster: {fileID: 11400000, guid: 62010eda3c3a6674698eb5e8af5f5ab1, type: 2}
 --- !u!114 &2101962827
 MonoBehaviour:
   m_ObjectHideFlags: 0

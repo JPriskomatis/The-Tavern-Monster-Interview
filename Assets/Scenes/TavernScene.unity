@@ -10147,10 +10147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TodaysCustomers
   allNPCs: []
-  spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   customerCount: 3
   reservations:
   - {fileID: 452216718}
@@ -12366,7 +12362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1957513646
 Transform:
   m_ObjectHideFlags: 0
@@ -12395,6 +12391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InterviewManager
   currentMonster: {fileID: 11400000, guid: d2df749bb6e08d949810d63fd398d4c3, type: 2}
+  FinishedWithMonster: {fileID: 11400000, guid: 62010eda3c3a6674698eb5e8af5f5ab1, type: 2}
 --- !u!1001 &1965789825
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -149,6 +149,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9de672fcfb0278a4d999502ade35ef60, type: 3}
       insertIndex: -1
       addedObject: {fileID: -8186602062773439703}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9de672fcfb0278a4d999502ade35ef60, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1937670530242689997}
     - targetCorrespondingSourceObject: {fileID: 2426147502794906326, guid: 9de672fcfb0278a4d999502ade35ef60, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1770969864159825768}
@@ -423,6 +426,35 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2.2247329, z: 1}
   m_Center: {x: 0, y: 0.6123666, z: -3.3994304e-15}
+--- !u!114 &-1937670530242689997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747371026298435000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a954b5167c502e246936c62a327277a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SOArchitecture::GameEventListener
+  EventResponses:
+  - Event: {fileID: 11400000, guid: 62010eda3c3a6674698eb5e8af5f5ab1, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -4331626394448844436}
+          m_TargetAssemblyTypeName: BaseMonster, Assembly-CSharp
+          m_MethodName: DestroySelf
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!137 &7336863042988506412 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -5425757889328335419, guid: 9de672fcfb0278a4d999502ade35ef60, type: 3}

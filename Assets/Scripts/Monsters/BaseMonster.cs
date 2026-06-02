@@ -66,6 +66,12 @@ public class BaseMonster : MonoBehaviour, IInteractable
         Debug.Log("Interaction Ended");
     }
 
+    public void DestroySelf()
+    {
+        Debug.Log("Destroyng self...");
+        Destroy(gameObject);
+    }
+
 
 
 
