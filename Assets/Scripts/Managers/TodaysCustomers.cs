@@ -13,6 +13,7 @@ public class TodaysCustomers : MonoBehaviour
 
     [SerializeField] private Reservation[] reservations;
 
+    [SerializeField] private TavernCustomers tavernCustomers;
     private void Awake()
     {
         allNPCs = Resources.LoadAll<NpcSO>("NPCs");
@@ -45,6 +46,8 @@ public class TodaysCustomers : MonoBehaviour
             if (selectedNPC != null)
             {
                 tonightCustomers.Add(selectedNPC);
+
+                tavernCustomers.tavernCustomers.Add(selectedNPC);
 
                 // --- FIX 1: Remove the selected NPC from the pool so it remains unique ---
                 validNPCs.Remove(selectedNPC);
@@ -100,7 +103,7 @@ public class TodaysCustomers : MonoBehaviour
 
             // Reactivate and apply text to the specific card being used;
             reservations[i].gameObject.SetActive(true);
-            reservations[i].ApplyReservation(tonightCustomers[i].npcName);
+            reservations[i].ApplyReservation(tonightCustomers[i].npcName, tonightCustomers[i].npcType.name);
         }
     }
 }

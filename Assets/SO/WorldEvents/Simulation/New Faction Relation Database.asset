@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dba047c7a911664e819eb6866f933be, type: 3}
+  m_Name: New Faction Relation Database
+  m_EditorClassIdentifier: Assembly-CSharp::FactionRelationDatabase
+  relations:
+  - monsterType: {fileID: 11400000, guid: 844aa6d8840a0464595ea03dbeafbadd, type: 2}
+    npcType: {fileID: 11400000, guid: e69191b9f6948744f86d1239d93fc2ce, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: 844aa6d8840a0464595ea03dbeafbadd, type: 2}
+    npcType: {fileID: 11400000, guid: 7b55ba90a9822ff439cfeadd5d059446, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: 844aa6d8840a0464595ea03dbeafbadd, type: 2}
+    npcType: {fileID: 11400000, guid: afe227e65efb42d4b91bc3e677d3659e, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: 844aa6d8840a0464595ea03dbeafbadd, type: 2}
+    npcType: {fileID: 11400000, guid: f5b7315153b433f4e850749c6df85350, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: aff623bf080843a498fd178b82d1c408, type: 2}
+    npcType: {fileID: 11400000, guid: e69191b9f6948744f86d1239d93fc2ce, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: aff623bf080843a498fd178b82d1c408, type: 2}
+    npcType: {fileID: 11400000, guid: 7b55ba90a9822ff439cfeadd5d059446, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: aff623bf080843a498fd178b82d1c408, type: 2}
+    npcType: {fileID: 11400000, guid: afe227e65efb42d4b91bc3e677d3659e, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: aff623bf080843a498fd178b82d1c408, type: 2}
+    npcType: {fileID: 11400000, guid: f5b7315153b433f4e850749c6df85350, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: cc4508568364ec54d928338383492e52, type: 2}
+    npcType: {fileID: 11400000, guid: e69191b9f6948744f86d1239d93fc2ce, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: cc4508568364ec54d928338383492e52, type: 2}
+    npcType: {fileID: 11400000, guid: 7b55ba90a9822ff439cfeadd5d059446, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: cc4508568364ec54d928338383492e52, type: 2}
+    npcType: {fileID: 11400000, guid: afe227e65efb42d4b91bc3e677d3659e, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: cc4508568364ec54d928338383492e52, type: 2}
+    npcType: {fileID: 11400000, guid: f5b7315153b433f4e850749c6df85350, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: 92eb6dffd6dcdf749ab5fbcbdff996a6, type: 2}
+    npcType: {fileID: 11400000, guid: e69191b9f6948744f86d1239d93fc2ce, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: 92eb6dffd6dcdf749ab5fbcbdff996a6, type: 2}
+    npcType: {fileID: 11400000, guid: 7b55ba90a9822ff439cfeadd5d059446, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: 92eb6dffd6dcdf749ab5fbcbdff996a6, type: 2}
+    npcType: {fileID: 11400000, guid: afe227e65efb42d4b91bc3e677d3659e, type: 2}
+    affinity: 0
+  - monsterType: {fileID: 11400000, guid: 92eb6dffd6dcdf749ab5fbcbdff996a6, type: 2}
+    npcType: {fileID: 11400000, guid: f5b7315153b433f4e850749c6df85350, type: 2}
+    affinity: 0

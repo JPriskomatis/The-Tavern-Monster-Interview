@@ -17,9 +17,9 @@ MonoBehaviour:
   monsterType: {fileID: 11400000, guid: 844aa6d8840a0464595ea03dbeafbadd, type: 2}
   monsterTraits:
   - Trait: {fileID: 11400000, guid: 4146cab2631a7784dbb560518d6f7272, type: 2}
-    Value: 0
+    Value: 1
   - Trait: {fileID: 11400000, guid: 7147c8be0b465c54fb3ece342a9f2c08, type: 2}
-    Value: 0
+    Value: 1
   minDay: 5
   maxDay: 999
   spawnWeight: 1

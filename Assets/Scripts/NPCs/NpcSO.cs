@@ -5,6 +5,7 @@ public class NpcSO : ScriptableObject
 {
     [Header("Identity")]
     public string npcName;
+    public NpcType npcType;
     public GameObject npcObject;
 
     [Header("Progression")]
@@ -13,6 +14,14 @@ public class NpcSO : ScriptableObject
     [Range(0f, 1f)]
     public float spawnWeight = 1f;
 
+    [Range(0, 10)]
+    public int tension;
+
     [Header("Relationships")]
     public NpcRelations relations = new NpcRelations();
+
+    private void OnEnable()
+    {
+        tension = 1;
+    }
 }
