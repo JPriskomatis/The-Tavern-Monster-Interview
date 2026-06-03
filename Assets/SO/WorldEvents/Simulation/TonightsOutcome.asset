@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09abdbbb4cf4fac46944e8f80bed403b, type: 3}
-  m_Name: ForceDay
-  m_EditorClassIdentifier: SOArchitecture::BooleanVariable
-  InitialValue: 0
-  Value: 0
+  m_Script: {fileID: 11500000, guid: e49d78ddca36c864cbb4c9a593a4d738, type: 3}
+  m_Name: TonightsOutcome
+  m_EditorClassIdentifier: SOArchitecture::StringVariable
+  Value: afsd
+  InitialValue: afsd

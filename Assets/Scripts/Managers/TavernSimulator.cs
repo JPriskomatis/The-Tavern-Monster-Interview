@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class TavernSimulator : MonoBehaviour
 {
-    [SerializeField] private TavernCustomers customers;
     [SerializeField] private TavernMonsters monsters;
+    [SerializeField] public WholeDayManager WholeDayManager;
+
+    public StringVariable TonightsOutcome;
+
 
     private enum TavernState
     {
@@ -17,7 +20,7 @@ public class TavernSimulator : MonoBehaviour
     public void CalculateTension()
     {
 
-        foreach (NpcSO customer in customers.tavernCustomers)
+        foreach (NpcSO customer in WholeDayManager.TodaysNPCs)
         {
             customer.tension = 0;
 
@@ -31,6 +34,15 @@ public class TavernSimulator : MonoBehaviour
             }
             Debug.Log(customer.npcName + " tension: " + customer.tension);
         }
-        
+
+        int overallTension = 0;
+        foreach (NpcSO npc in WholeDayManager.TodaysNPCs)
+        {
+            overallTension = overallTension + npc.tension;
+        }
+
+        TonightsOutcome.Value = "Your tension is "+ overallTension.ToString();
+
+
     }
 }
