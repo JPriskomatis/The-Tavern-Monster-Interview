@@ -10658,14 +10658,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TodaysCustomers
   WholeDayManager: {fileID: 11400000, guid: a41cb80f252b47345a17664d955d1086, type: 2}
-  customerCount: 3
+  maxCustomerCount: 3
   reservations:
   - {fileID: 452216718}
   - {fileID: 1272786542}
   - {fileID: 1525254135}
-  forcedSpawnCustomers: 0
-  forcedCustomers:
-  - {fileID: 11400000, guid: 0d8c6f01b0a0aa447bde5a86acd509e1, type: 2}
 --- !u!114 &1595234743
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,15 +16,16 @@ MonoBehaviour:
   TotalMonsters:
   - {fileID: 11400000, guid: 097ec7c40f5f35b42a860f3fc38545a9, type: 2}
   - {fileID: 11400000, guid: 2260323ae18c0374ebce0b7ad2a120fd, type: 2}
-  TodaysMonsters: []
+  TodaysMonsters:
+  - {fileID: 11400000, guid: 2260323ae18c0374ebce0b7ad2a120fd, type: 2}
   TotalNpcs:
   - {fileID: 11400000, guid: 0d8c6f01b0a0aa447bde5a86acd509e1, type: 2}
   - {fileID: 11400000, guid: 9420816b89fef214b802c8d9636fd8dc, type: 2}
   - {fileID: 11400000, guid: eae93d7c59acdb44cbf71bace4da70f4, type: 2}
   TodaysNPCs:
-  - {fileID: 11400000, guid: eae93d7c59acdb44cbf71bace4da70f4, type: 2}
+  - {fileID: 11400000, guid: 9420816b89fef214b802c8d9636fd8dc, type: 2}
   ForceDay: {fileID: 11400000, guid: 00a6e7b9ec36cf549aa06043ce0eddf8, type: 2}
   ForcedNPCs:
-  - {fileID: 11400000, guid: eae93d7c59acdb44cbf71bace4da70f4, type: 2}
+  - {fileID: 11400000, guid: 9420816b89fef214b802c8d9636fd8dc, type: 2}
   ForcedMonsters:
-  - {fileID: 11400000, guid: 097ec7c40f5f35b42a860f3fc38545a9, type: 2}
+  - {fileID: 11400000, guid: 2260323ae18c0374ebce0b7ad2a120fd, type: 2}

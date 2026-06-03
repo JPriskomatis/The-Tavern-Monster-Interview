@@ -7,7 +7,7 @@ public class TodaysCustomers : MonoBehaviour
     [SerializeField] private WholeDayManager WholeDayManager;
 
     [Header("NPC Count Settings")]
-    [SerializeField] int customerCount;
+    [SerializeField] int maxCustomerCount;
 
     //private List<NpcSO> tonightCustomers = new List<NpcSO>();
 
@@ -28,6 +28,9 @@ public class TodaysCustomers : MonoBehaviour
         if (!WholeDayManager.ForceDay.Value)
         {
             Debug.Log("Testing");
+
+            //Random amount of customers
+            int randomCustomerCount = Random.Range(1, maxCustomerCount+1);
             
 
             List<NpcSO> validNPCs = new List<NpcSO>();
@@ -42,7 +45,7 @@ public class TodaysCustomers : MonoBehaviour
             }
 
             // Which NPCs to spawn based on their weight
-            for (int i = 0; i < customerCount; i++)
+            for (int i = 0; i < randomCustomerCount; i++)
             {
                 // If we run out of unique NPCs in our pool entirely, stop rolling
                 if (validNPCs.Count == 0)

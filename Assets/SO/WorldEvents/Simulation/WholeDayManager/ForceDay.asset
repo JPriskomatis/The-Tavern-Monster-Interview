@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09abdbbb4cf4fac46944e8f80bed403b, type: 3}
   m_Name: ForceDay
   m_EditorClassIdentifier: SOArchitecture::BooleanVariable
-  InitialValue: 1
-  Value: 1
+  InitialValue: 0
+  Value: 0
