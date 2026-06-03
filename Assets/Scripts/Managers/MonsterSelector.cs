@@ -13,52 +13,70 @@ public class MonsterSelector : MonoBehaviour
      */
 
     [SerializeField] private Transform spawnLocation;
-    [SerializeField] private MonsterSO[] monsters;
+
+    List<MonsterSO> validMonsters = new List<MonsterSO>();
+
+    public WholeDayManager WholeDayManager;
 
     public MonsterSO GetMonster(int day)
     {
-        Debug.Log("Monsters array size: " + monsters.Length);
-        List<MonsterSO> validMonsters = new List<MonsterSO>();
-
-        //We add all the valid monsters into our list;
-
-        foreach(var monster in monsters)
+        WholeDayManager.TodaysMonsters.Clear();
+        if(!WholeDayManager.ForceDay.Value)
         {
-            if (day < monster.minDay) continue;
-            if (day > monster.maxDay) continue;
+            Debug.Log("Monsters array size: " + WholeDayManager.TotalMonsters.Length);
 
-            validMonsters.Add(monster);
-        }
+            //We add all the valid monsters into our list;
 
-        if(validMonsters.Count == 0)
-        {
-            Debug.LogWarning("No valid monsters for this day");
-            return null;
-        }
-
-        float totalWeight = 0f;
-        foreach (var monster in validMonsters)
-        {
-            totalWeight += monster.spawnWeight;
-        }
-        
-        float roll = Random.Range(0f, totalWeight);
-
-        float current = 0f;
-
-        foreach (var monster in validMonsters)
-        {
-            current += monster.spawnWeight;
-            
-            if(roll <= current)
+            foreach (var monster in WholeDayManager.TotalMonsters)
             {
-                return monster;
+                if (day < monster.minDay) continue;
+                if (day > monster.maxDay) continue;
+
+                validMonsters.Add(monster);
             }
 
+            if (validMonsters.Count == 0)
+            {
+                Debug.LogWarning("No valid monsters for this day");
+                return null;
+            }
+
+            float totalWeight = 0f;
+            foreach (var monster in validMonsters)
+            {
+                totalWeight += monster.spawnWeight;
+            }
+
+            float roll = Random.Range(0f, totalWeight);
+
+            float current = 0f;
+
+            foreach (var monster in validMonsters)
+            {
+                current += monster.spawnWeight;
+
+                if (roll <= current)
+                {
+                    WholeDayManager.TodaysMonsters.Add(monster);
+                    return monster;
+                }
+
+            }
+
+
+            return WholeDayManager.TotalMonsters[0];
         }
-
-
-        return monsters[0];
+        else
+        {
+            if(WholeDayManager.ForcedMonsters.Count == 0)
+            {
+                Debug.LogWarning("You didn't place any forced monsters");
+                return WholeDayManager.TodaysMonsters[0];
+            }
+            WholeDayManager.TodaysMonsters.Add(WholeDayManager.ForcedMonsters[0]);
+            return WholeDayManager.TodaysMonsters[0];
+        }
+        
     }
 
     public GameObject SpawnMonster(MonsterSO monster)

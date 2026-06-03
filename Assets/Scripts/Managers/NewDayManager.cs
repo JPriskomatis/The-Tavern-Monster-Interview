@@ -15,7 +15,9 @@ public class NewDayManager : MonoBehaviour
 
 
     [Header("Days Settings")]
-    public int currentDay = 1;
+    public IntVariable CurrentDay;
+
+    public WholeDayManager WholeDayManager;
 
     [SerializeField] private MonsterSelector monsterSelector;
 
@@ -29,7 +31,7 @@ public class NewDayManager : MonoBehaviour
 
     public void AdvanceDay()
     {
-        currentDay++;
+        CurrentDay.Value++;
 
         GenerateDay();
     }
@@ -42,8 +44,7 @@ public class NewDayManager : MonoBehaviour
             Destroy(currentMonsterObject);
         }
 
-        CurrentMonster =
-            monsterSelector.GetMonster(currentDay);
+        CurrentMonster = monsterSelector.GetMonster(CurrentDay.Value);
 
         currentMonsterObject = monsterSelector.SpawnMonster(CurrentMonster);
 
@@ -64,7 +65,7 @@ public class NewDayManager : MonoBehaviour
         
         
 
-        Debug.Log($"DAY {currentDay}");
+        Debug.Log($"DAY {CurrentDay.Value}");
         Debug.Log($"Monster: {CurrentMonster.monsterName}");
         Debug.Log($"Headline: {CurrentEvent.title}");
     }

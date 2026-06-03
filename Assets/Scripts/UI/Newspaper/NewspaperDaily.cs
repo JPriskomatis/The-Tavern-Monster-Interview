@@ -23,6 +23,6 @@ public class NewspaperDaily : MonoBehaviour
 
         eventTitle.text = currentEvent.title;
         eventDescription.text = currentEvent.description;
-        currentDayNum.text = "Day "+dayManager.currentDay.ToString();
+        currentDayNum.text = "Day "+dayManager.CurrentDay.Value.ToString();
     }
 }

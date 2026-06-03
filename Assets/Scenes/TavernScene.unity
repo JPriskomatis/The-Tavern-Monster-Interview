@@ -1139,9 +1139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterSelector
   spawnLocation: {fileID: 1570229428}
-  monsters:
-  - {fileID: 11400000, guid: 097ec7c40f5f35b42a860f3fc38545a9, type: 2}
-  - {fileID: 11400000, guid: 2260323ae18c0374ebce0b7ad2a120fd, type: 2}
+  WholeDayManager: {fileID: 11400000, guid: a41cb80f252b47345a17664d955d1086, type: 2}
 --- !u!1001 &216247016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10659,13 +10657,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7628496539359da4da17a3d2dbc6c9d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TodaysCustomers
-  allNPCs: []
+  WholeDayManager: {fileID: 11400000, guid: a41cb80f252b47345a17664d955d1086, type: 2}
   customerCount: 3
   reservations:
   - {fileID: 452216718}
   - {fileID: 1272786542}
   - {fileID: 1525254135}
-  tavernCustomers: {fileID: 11400000, guid: ca6a26f085afef44a9650e8ad9a31fb1, type: 2}
+  forcedSpawnCustomers: 0
+  forcedCustomers:
+  - {fileID: 11400000, guid: 0d8c6f01b0a0aa447bde5a86acd509e1, type: 2}
 --- !u!114 &1595234743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11697,7 +11697,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewDayManager
   NewDay: {fileID: 11400000, guid: 3caacfdf055f88e4b994d10e715c5f8a, type: 2}
-  currentDay: 0
+  CurrentDay: {fileID: 11400000, guid: fc556778038f91144a4cf46590350712, type: 2}
+  WholeDayManager: {fileID: 11400000, guid: a41cb80f252b47345a17664d955d1086, type: 2}
   monsterSelector: {fileID: 206728365}
   destinationTransform: {fileID: 1353825562}
 --- !u!1001 &1795534766
@@ -12951,7 +12952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InterviewManager
   currentMonster: {fileID: 11400000, guid: d2df749bb6e08d949810d63fd398d4c3, type: 2}
-  tavernMonsters: {fileID: 0}
+  tavernMonsters: {fileID: 11400000, guid: 6f1b95b7e9b59a14a9f6b79dc5540e23, type: 2}
   FinishedWithMonster: {fileID: 11400000, guid: 62010eda3c3a6674698eb5e8af5f5ab1, type: 2}
 --- !u!1001 &1965789825
 PrefabInstance:

@@ -4,57 +4,76 @@ using UnityEngine;
 public class TodaysCustomers : MonoBehaviour
 {
     [Header("NPC Pool")]
-    [SerializeField] private NpcSO[] allNPCs;
+    [SerializeField] private WholeDayManager WholeDayManager;
 
     [Header("NPC Count Settings")]
     [SerializeField] int customerCount;
 
-    private List<NpcSO> tonightCustomers = new List<NpcSO>();
+    //private List<NpcSO> tonightCustomers = new List<NpcSO>();
 
     [SerializeField] private Reservation[] reservations;
 
-    [SerializeField] private TavernCustomers tavernCustomers;
-    private void Awake()
-    {
-        allNPCs = Resources.LoadAll<NpcSO>("NPCs");
-    }
+    //[SerializeField] private TavernCustomers tavernCustomers;
+
+    //private void Awake()
+    //{
+    //    allNPCs.TotalNpcs = Resources.LoadAll<NpcSO>("NPCs");
+    //}
 
     public void GenerateCustomers(int currentDay)
     {
-        tonightCustomers.Clear();
+        WholeDayManager.TodaysNPCs.Clear();
 
-        List<NpcSO> validNPCs = new List<NpcSO>();
 
-        // Valid NPCs for the day
-        foreach (var npc in allNPCs)
+        if (!WholeDayManager.ForceDay.Value)
         {
-            if (currentDay < npc.minDay)
-                continue;
+            Debug.Log("Testing");
+            
 
-            validNPCs.Add(npc);
-        }
+            List<NpcSO> validNPCs = new List<NpcSO>();
 
-        // Which NPCs to spawn based on their weight
-        for (int i = 0; i < customerCount; i++)
-        {
-            // If we run out of unique NPCs in our pool entirely, stop rolling
-            if (validNPCs.Count == 0)
-                break;
-
-            NpcSO selectedNPC = GetWeightedRandomNPC(validNPCs);
-
-            if (selectedNPC != null)
+            // Valid NPCs for the day
+            foreach (var npc in WholeDayManager.TotalNpcs)
             {
-                tonightCustomers.Add(selectedNPC);
+                if (currentDay < npc.minDay)
+                    continue;
 
-                tavernCustomers.tavernCustomers.Add(selectedNPC);
+                validNPCs.Add(npc);
+            }
 
-                // --- FIX 1: Remove the selected NPC from the pool so it remains unique ---
-                validNPCs.Remove(selectedNPC);
+            // Which NPCs to spawn based on their weight
+            for (int i = 0; i < customerCount; i++)
+            {
+                // If we run out of unique NPCs in our pool entirely, stop rolling
+                if (validNPCs.Count == 0)
+                    break;
+
+                NpcSO selectedNPC = GetWeightedRandomNPC(validNPCs);
+
+                if (selectedNPC != null)
+                {
+
+                    WholeDayManager.TodaysNPCs.Add(selectedNPC);
+
+                    validNPCs.Remove(selectedNPC);
+                }
+            }
+
+            
+        }
+        else
+        {
+            
+            foreach ( NpcSO forcedNpc in WholeDayManager.ForcedNPCs)
+            {
+                
+                WholeDayManager.TodaysNPCs.Add(forcedNpc);
+                Debug.Log("Added forcedNPCs");
             }
         }
 
         SpawnCustomers();
+
     }
 
     private NpcSO GetWeightedRandomNPC(List<NpcSO> npcs)
@@ -92,18 +111,18 @@ public class TodaysCustomers : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < tonightCustomers.Count; i++)
+        for (int i = 0; i < WholeDayManager.TodaysNPCs.Count; i++)
         {
 
             // Stop if we have more customers than actual reservation card components assigned;
             if (i >= reservations.Length)
                 break;
 
-            Debug.Log("Spawning: " + tonightCustomers[i].npcName);
+            Debug.Log("Spawning: " + WholeDayManager.TodaysNPCs[i].npcName);
 
             // Reactivate and apply text to the specific card being used;
             reservations[i].gameObject.SetActive(true);
-            reservations[i].ApplyReservation(tonightCustomers[i].npcName, tonightCustomers[i].npcType.name);
+            reservations[i].ApplyReservation(WholeDayManager.TodaysNPCs[i].npcName, WholeDayManager.TodaysNPCs[i].npcType.name);
         }
     }
 }
