@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "MonsterSO", menuName = "MonsterData/CreepyDemon")]
+[CreateAssetMenu(fileName = "MonsterSO", menuName = "MonsterData/NewMonster")]
 public class MonsterSO : ScriptableObject
 {
     [Header("Identity")]

@@ -10,18 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f2cc2f5acfe7334d99ddf179f0e5eca, type: 3}
-  m_Name: Bruh
+  m_Name: Hakum
   m_EditorClassIdentifier: Assembly-CSharp::MonsterSO
-  monsterName: bruh
-  monsterObject: {fileID: 6747371026298435000, guid: eec87450b5531b949ae50fb85ea8dad4, type: 3}
-  monsterType: {fileID: 11400000, guid: 844aa6d8840a0464595ea03dbeafbadd, type: 2}
+  monsterName: Haokum
+  monsterObject: {fileID: 3650454669456476566, guid: 65627f926cfc26d428412a242dab1499, type: 3}
+  monsterType: {fileID: 11400000, guid: aff623bf080843a498fd178b82d1c408, type: 2}
   monsterTraits:
   - Trait: {fileID: 11400000, guid: 4146cab2631a7784dbb560518d6f7272, type: 2}
-    Value: 3
-  - Trait: {fileID: 11400000, guid: 7147c8be0b465c54fb3ece342a9f2c08, type: 2}
-    Value: 3
+    Value: 0
   minDay: 1
   maxDay: 999
-  spawnWeight: 0.5
-  eventReference: {fileID: 11400000, guid: c922427761596ee4a848bcbf07ac526b, type: 2}
-  inkJSON: {fileID: 4900000, guid: 51b674ae0ba397d43bd7ddbf19a904cd, type: 3}
+  spawnWeight: 0.819
+  eventReference: {fileID: 11400000, guid: 336bc811e83ab7b479b57baab16a4264, type: 2}
+  inkJSON: {fileID: 4900000, guid: 39650ac1fbee29d4c87dd4e010c33995, type: 3}
