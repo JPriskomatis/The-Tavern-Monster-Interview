@@ -1386,6 +1386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 206728364}
   - component: {fileID: 206728365}
+  - component: {fileID: 206728366}
   m_Layer: 0
   m_Name: MonsterSelector
   m_TagString: Untagged
@@ -1422,6 +1423,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonsterSelector
   spawnLocation: {fileID: 1570229428}
   WholeDayManager: {fileID: 11400000, guid: a41cb80f252b47345a17664d955d1086, type: 2}
+  monsterCount: 2
+--- !u!114 &206728366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206728363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a954b5167c502e246936c62a327277a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SOArchitecture::GameEventListener
+  EventResponses:
+  - Event: {fileID: 11400000, guid: 62010eda3c3a6674698eb5e8af5f5ab1, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 206728365}
+          m_TargetAssemblyTypeName: MonsterSelector, Assembly-CSharp
+          m_MethodName: RemoveMonster
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &216247016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10242,6 +10273,22 @@ MonoBehaviour:
         - m_Target: {fileID: 1788134671}
           m_TargetAssemblyTypeName: NewDayManager, Assembly-CSharp
           m_MethodName: AdvanceDay
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Event: {fileID: 11400000, guid: bae035427a55f824f84cb8e2e346db48, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1788134671}
+          m_TargetAssemblyTypeName: NewDayManager, Assembly-CSharp
+          m_MethodName: SpawnNextMonster
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

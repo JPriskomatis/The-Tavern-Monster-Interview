@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class NewDayManager : MonoBehaviour
@@ -29,26 +30,42 @@ public class NewDayManager : MonoBehaviour
 
     [SerializeField] private Transform destinationTransform;
 
+    [SerializeField] private Queue<MonsterSO> TodaysMonsters = new Queue<MonsterSO>();
+
     public void AdvanceDay()
     {
         CurrentDay.Value++;
 
-        GenerateDay();
+        GenerateTodaysMonsters();
+        SpawnNextMonster();
+        GenerateNewspaper();
+
     }
 
-    private void GenerateDay()
+    public void SpawnNextMonster()
     {
         //We destroy the previous day's monster;
-        if(currentMonsterObject != null)
+        if (currentMonsterObject != null)
         {
             Destroy(currentMonsterObject);
         }
 
-        CurrentMonster = monsterSelector.GetMonster(CurrentDay.Value);
+        CurrentMonster = WholeDayManager.TodaysMonsters[0];
+
+        //CurrentMonster = monsterSelector.GetMonsters(CurrentDay.Value)[0];
 
         currentMonsterObject = monsterSelector.SpawnMonster(CurrentMonster);
 
         StartCoroutine(MoveTowards(currentMonsterObject, destinationTransform, 3f));
+    }
+    public void GenerateTodaysMonsters()
+    {
+        monsterSelector.GetMonsters(CurrentDay.Value);
+    }
+
+    private void GenerateNewspaper()
+    {
+        
 
         //The next couple of parts generate the things we need for the new day, a new newspaper and a new monster;
         WorldEventSO forcedEvent = CurrentMonster.eventReference;
