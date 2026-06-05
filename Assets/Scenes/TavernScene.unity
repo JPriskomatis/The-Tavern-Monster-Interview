@@ -464,6 +464,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4721780193091316, guid: efdb3ed10ba9c6b418a492aa30ba0edd, type: 3}
   m_PrefabInstance: {fileID: 16879593}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &26402517 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 38037983837024912, guid: 8b3a34d00ae838e45b6796426e77dbac, type: 3}
+  m_PrefabInstance: {fileID: 265419514}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &29065121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2132,6 +2143,10 @@ PrefabInstance:
     - target: {fileID: 907463085272535146, guid: 8b3a34d00ae838e45b6796426e77dbac, type: 3}
       propertyPath: m_text
       value: Fethenal Seems Quiet
+      objectReference: {fileID: 0}
+    - target: {fileID: 907463085272535146, guid: 8b3a34d00ae838e45b6796426e77dbac, type: 3}
+      propertyPath: m_fontSize
+      value: 32.75
       objectReference: {fileID: 0}
     - target: {fileID: 2117890900084955527, guid: 8b3a34d00ae838e45b6796426e77dbac, type: 3}
       propertyPath: m_AnchorMax.y
@@ -10021,6 +10036,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9069916636960822806, guid: 160a5e3b4c232194f913d962f7eb5079, type: 3}
   m_PrefabInstance: {fileID: 1473437581}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1473739073 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9157426932316963749, guid: 8b3a34d00ae838e45b6796426e77dbac, type: 3}
+  m_PrefabInstance: {fileID: 265419514}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1503883691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12723,7 +12749,15 @@ MonoBehaviour:
   dayManager: {fileID: 1788134671}
   eventTitle: {fileID: 1379067797}
   eventDescription: {fileID: 1714351358}
+  eventTitle1: {fileID: 26402517}
+  eventDescription2: {fileID: 1473739073}
   currentDayNum: {fileID: 1367173500}
+  randomWorldEvent:
+  - {fileID: 11400000, guid: 33f8623dbb639fe49adfce9a5494142f, type: 2}
+  - {fileID: 11400000, guid: 86e025b52721fa948b7cbb710c0d33d8, type: 2}
+  - {fileID: 11400000, guid: 806100f70e3bae04fa2cb9dcd01537b3, type: 2}
+  - {fileID: 11400000, guid: f26c37a879d1af346b4d0f559ee40821, type: 2}
+  - {fileID: 11400000, guid: 356bfed0d9db0834a9b23102621d3a18, type: 2}
 --- !u!1 &1842216523
 GameObject:
   m_ObjectHideFlags: 0
