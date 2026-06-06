@@ -11,8 +11,15 @@ public class Reservation : InteractableItem
 
     [SerializeField] TextMeshProUGUI npcName, npcType;
 
+    public static bool hasRead = false;
+    public IntGameEvent FinishedTask;
     protected override void BeginInteraction()
     {
+        if(!hasRead)
+        {
+            FinishedTask.Raise(0);
+            hasRead = true;
+        }
         Debug.Log("Reserved Table for: "+ customerNames);
 
         npcName.text = customerNames;

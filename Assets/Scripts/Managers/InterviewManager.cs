@@ -9,9 +9,20 @@ public class InterviewManager : MonoBehaviour
 
     public GameEvent FinishedWithMonster;
 
+    public static bool hasSpoken = false;
+    public IntGameEvent FinishedTask;
 
+    private void Start()
+    {
+        if (!hasSpoken)
+        {
+            FinishedTask.Raise(2);
+            hasSpoken = true;
+        }
+    }
     public void StartInterview(MonsterSO monster)
     {
+        
         currentMonster.monster = monster;
     }
 

@@ -7058,6 +7058,7 @@ MonoBehaviour:
   currentMonster: {fileID: 11400000, guid: d2df749bb6e08d949810d63fd398d4c3, type: 2}
   tavernMonsters: {fileID: 11400000, guid: 6f1b95b7e9b59a14a9f6b79dc5540e23, type: 2}
   FinishedWithMonster: {fileID: 11400000, guid: 62010eda3c3a6674698eb5e8af5f5ab1, type: 2}
+  FinishedTask: {fileID: 11400000, guid: 37b1274992b6e8f4490353bbda931f2a, type: 2}
 --- !u!114 &2101962827
 MonoBehaviour:
   m_ObjectHideFlags: 0
