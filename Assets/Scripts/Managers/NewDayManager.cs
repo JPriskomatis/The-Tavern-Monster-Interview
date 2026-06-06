@@ -35,6 +35,7 @@ public class NewDayManager : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.Instance.Play("Background");
         AdvanceDay();
     }
     public void AdvanceDay()
