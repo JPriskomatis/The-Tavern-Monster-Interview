@@ -21,6 +21,7 @@ public class NewDayManager : MonoBehaviour
     public WholeDayManager WholeDayManager;
 
     [SerializeField] private MonsterSelector monsterSelector;
+    [SerializeField] private TodaysCustomers todaysCustomers;
 
     public MonsterSO CurrentMonster { get; private set; }
 
@@ -30,12 +31,17 @@ public class NewDayManager : MonoBehaviour
 
     [SerializeField] private Transform destinationTransform;
 
-    [SerializeField] private Queue<MonsterSO> TodaysMonsters = new Queue<MonsterSO>();
 
+
+    private void Start()
+    {
+        AdvanceDay();
+    }
     public void AdvanceDay()
     {
         CurrentDay.Value++;
 
+        todaysCustomers.GenerateCustomers(CurrentDay.Value);
         GenerateTodaysMonsters();
         SpawnNextMonster();
         GenerateNewspaper();
@@ -50,13 +56,22 @@ public class NewDayManager : MonoBehaviour
             Destroy(currentMonsterObject);
         }
 
-        CurrentMonster = WholeDayManager.TodaysMonsters[0];
+        if(WholeDayManager.TodaysMonsters.Count > 0)
+        {
+            CurrentMonster = WholeDayManager.TodaysMonsters[0];
 
-        //CurrentMonster = monsterSelector.GetMonsters(CurrentDay.Value)[0];
+            //CurrentMonster = monsterSelector.GetMonsters(CurrentDay.Value)[0];
 
-        currentMonsterObject = monsterSelector.SpawnMonster(CurrentMonster);
+            currentMonsterObject = monsterSelector.SpawnMonster(CurrentMonster);
 
-        StartCoroutine(MoveTowards(currentMonsterObject, destinationTransform, 3f));
+            StartCoroutine(MoveTowards(currentMonsterObject, destinationTransform, 3f));
+        }
+        else
+        {
+            Debug.Log("Already spawned all monsters");
+        }
+
+        
     }
     public void GenerateTodaysMonsters()
     {

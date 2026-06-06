@@ -27,7 +27,6 @@ public class TodaysCustomers : MonoBehaviour
 
         if (!WholeDayManager.ForceDay.Value)
         {
-            Debug.Log("Testing");
 
             //Random amount of customers
             int randomCustomerCount = Random.Range(1, maxCustomerCount+1);

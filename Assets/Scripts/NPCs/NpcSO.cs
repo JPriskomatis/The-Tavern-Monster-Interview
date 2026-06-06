@@ -22,6 +22,6 @@ public class NpcSO : ScriptableObject
 
     private void OnEnable()
     {
-        tension = 1;
+        tension = 0;
     }
 }

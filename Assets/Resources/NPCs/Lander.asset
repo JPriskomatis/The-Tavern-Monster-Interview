@@ -17,7 +17,7 @@ MonoBehaviour:
   npcObject: {fileID: 1083611620945343734, guid: 7e8204e8cf708484c836f2000d0e72c2, type: 3}
   minDay: 0
   spawnWeight: 1
-  tension: 1
+  tension: 0
   relations:
     friendly:
     - {fileID: 11400000, guid: 92eb6dffd6dcdf749ab5fbcbdff996a6, type: 2}
