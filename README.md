@@ -27,13 +27,10 @@ Make the right choices and your tavern will thrive. Make the wrong ones, and you
 |  **Unique Monster Traits** | Discover different personalities and traits that influence who belongs in your tavern. |
 |  **World Events** | Pay attention to events that can reveal whether monsters are telling the truth. |
 |  **Relationships** | Navigate relationships between monsters and other NPCs. |
-|  **Tavern Management** | Balance profit, reputation, and the delicate relationship between humans and monsters. |
-|  **Rise Through the Ranks** | Build your reputation until even the king takes notice. |
 
-## Handle all interactions in Editor through Scriptable Objects
+## Use of Scriptable Objects to handle data in-editor
 <img width="350" height="440" alt="image" src="https://github.com/user-attachments/assets/ff3224eb-147d-405f-bc1b-a1eb375ceddb" />
 <img width="350" height="506" alt="image" src="https://github.com/user-attachments/assets/82b48f62-0991-4db1-8d6b-613ed3f9bdc7" />
-
 
 
 ##  A Day at the Tavern
