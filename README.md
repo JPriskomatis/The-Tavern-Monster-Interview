@@ -1,4 +1,4 @@
-# 🍺 Monster Job Interview
+# Monster Job Interview
 
 <p align="center">
   <em>Every monster deserves a place at the table. Just make sure you hire the right ones.</em>
