@@ -30,6 +30,12 @@ Make the right choices and your tavern will thrive. Make the wrong ones, and you
 |  **Tavern Management** | Balance profit, reputation, and the delicate relationship between humans and monsters. |
 |  **Rise Through the Ranks** | Build your reputation until even the king takes notice. |
 
+## Handle all interactions in Editor through Scriptable Objects
+<img width="350" height="440" alt="image" src="https://github.com/user-attachments/assets/ff3224eb-147d-405f-bc1b-a1eb375ceddb" />
+<img width="350" height="506" alt="image" src="https://github.com/user-attachments/assets/82b48f62-0991-4db1-8d6b-613ed3f9bdc7" />
+
+
+
 ##  A Day at the Tavern
 
 1. **Review Reservations** — Find out which customers are expected that night.
@@ -37,6 +43,9 @@ Make the right choices and your tavern will thrive. Make the wrong ones, and you
 3. **Read Between the Lines** — Use traits, relationships, and world events to uncover the truth.
 4. **Make Your Choices** — Decide who gets accepted.
 5. **Face the Consequences** — See how your decisions affect the night's outcome.
+
+   <img width="1096" height="618" alt="image" src="https://github.com/user-attachments/assets/1470dbc5-bcae-44ba-ba1c-91e12691a316" />
+
 
 ---
 
