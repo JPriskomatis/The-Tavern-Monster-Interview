@@ -8,17 +8,6 @@
   A narrative-driven tavern management game about monsters, questionable decisions, and nights that rarely go according to plan.
 </p>
 
----
-
-## Take a Look Inside
-
-<p align="center">
-  <a href="https://github.com/user-attachments/assets/07d39f86-85b2-4a94-8f3c-dfe8f7b4644d">
-    <img src="https://github.com/user-attachments/assets/07d39f86-85b2-4a94-8f3c-dfe8f7b4644d" alt="Monster Job Interview gameplay preview" width="100%">
-  </a>
-</p>
-
----
 
 ## Welcome to the Tavern
 
@@ -58,3 +47,12 @@ Make the right choices and your tavern will thrive. Make the wrong ones, and you
 <p align="center">
   <em>Not every monster is trouble. But it's probably best to check.</em>
 </p>
+
+---
+
+## Gameplay Preview
+
+https://github.com/user-attachments/assets/07d39f86-85b2-4a94-8f3c-dfe8f7b4644d
+
+
+---
